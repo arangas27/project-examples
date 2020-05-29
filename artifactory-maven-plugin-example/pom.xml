@@ -32,7 +32,20 @@
            <type>pom</type>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+             <repository>
+                 <id>central</id>
+                 <name>AR JFrog Artifactory-releases</name>
+                 <url>http://localhost:8082/artifactory/mock-maven-dev-local; 
+                  buildNumber=${buildNumber}; 
+                  revision=${revision}</url>  
+             </repository>
+             <snapshotRepository>
+                 <id>snapshots</id>
+                 <name>AR JFrog Artifactory-snapshots</name>
+                 <url>http://localhost:8082/artifactory/mock-maven-dev-local</url>
+             </snapshotRepository>
+     </distributionManagement>
     <build>
         <pluginManagement>
             <plugins>
